@@ -21,19 +21,19 @@ body,#root{
 }
 
 #display{
-  width:378px;
-  height:60px;
+  width:362px;
+  height:75px;
   margin:5px;
 }
 
 #keys{
-  width:378px;
+  width:362px;
   position: relative;
   left:4px;
 }
 
 .key{
-  margin:0 2px;
+  
 }
 
 .small{
@@ -45,12 +45,12 @@ body,#root{
 .jumbo{
   display:inline-block;
   height:60px;
-  width:184px;
+  width:180px;
 }
 
 .vertical{
   position:absolute;
-  height:123px;
+  height:120px;
   width:90px;
 }
 

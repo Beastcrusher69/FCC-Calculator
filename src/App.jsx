@@ -1,32 +1,78 @@
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [display, setDisplay] = useState('0');
+
+  const handleChange = (event) => {
+    const number = event.target.textContent;
+    
+    if(display === '0'){
+      setDisplay(number);
+    }
+    else{
+      setDisplay(display + number);
+    }
+  }
 
   return (
     <div id="calculator">
       <div id="display">
-
+        {display}
       </div>
 
       <div id="keys">
-        <button id="" class="key jumbo"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key small"></button>
-        <button id="" class="key vertical"></button>
-        <button id="" class="key jumbo"></button>
-        <button id="" class="key small"></button>
+        <button id="ac"
+                className="key jumbo"
+                onClick={handleChange}>AC</button>
+        <button id="divide" 
+                className="key small"
+                onClick={handleChange}>/</button>
+        <button id="multiply" 
+                className="key small"
+                onClick={handleChange}>x</button>
+        <button id="seven" 
+                className="key small"
+                onClick={handleChange}>7</button>
+        <button id="eight" 
+                className="key small"
+                onClick={handleChange}>8</button>
+
+        <button id="nine" 
+                className="key small"
+                onClick={handleChange}>9</button>
+        <button id="subtract" 
+                className="key small"
+                onClick={handleChange}>-</button>
+        <button id="four" 
+                className="key small"
+                onClick={handleChange}>4</button>
+        <button id="five" 
+                className="key small"
+                onClick={handleChange}>5</button>
+        <button id="six" 
+                className="key small"
+                onClick={handleChange}>6</button> 
+        <button id="add" 
+                className="key small"
+                onClick={handleChange}>+</button>
+        <button id="one" 
+                className="key small"
+                onClick={handleChange}>1</button>
+        <button id="two" 
+                className="key small"
+                onClick={handleChange}>2</button>
+        <button id="three" 
+                className="key small"
+                onClick={handleChange}>3</button>
+        <button id="equals"
+                className="key vertical"
+                onClick={handleChange}>=</button>
+        <button id="zero" 
+                className="key jumbo"
+                onClick={handleChange}>0</button>
+        <button id="decimal" 
+                className="key small"
+                onClick={handleChange}>.</button>
 
 
       </div>
