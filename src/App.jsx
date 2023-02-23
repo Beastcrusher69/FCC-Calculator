@@ -14,6 +14,19 @@ function App() {
     }
   }
 
+  const handleOperator = (event) => {
+        setDisplay(display + ' ' + event.target.textContent + ' ');
+  }
+
+  const handleEquals = () => {
+        const answer = eval(display);
+
+        setDisplay(answer);
+  }
+
+  const handleClear = () => {
+        setDisplay('0');
+  }
   return (
     <div id="calculator">
       <div id="display">
@@ -21,15 +34,15 @@ function App() {
       </div>
 
       <div id="keys">
-        <button id="ac"
+        <button id="clear"
                 className="key jumbo"
-                onClick={handleChange}>AC</button>
+                onClick={handleClear}>AC</button>
         <button id="divide" 
                 className="key small"
-                onClick={handleChange}>/</button>
+                onClick={handleOperator}>/</button>
         <button id="multiply" 
                 className="key small"
-                onClick={handleChange}>x</button>
+                onClick={handleOperator}>*</button>
         <button id="seven" 
                 className="key small"
                 onClick={handleChange}>7</button>
@@ -42,7 +55,7 @@ function App() {
                 onClick={handleChange}>9</button>
         <button id="subtract" 
                 className="key small"
-                onClick={handleChange}>-</button>
+                onClick={handleOperator}>-</button>
         <button id="four" 
                 className="key small"
                 onClick={handleChange}>4</button>
@@ -54,7 +67,7 @@ function App() {
                 onClick={handleChange}>6</button> 
         <button id="add" 
                 className="key small"
-                onClick={handleChange}>+</button>
+                onClick={handleOperator}>+</button>
         <button id="one" 
                 className="key small"
                 onClick={handleChange}>1</button>
@@ -66,7 +79,7 @@ function App() {
                 onClick={handleChange}>3</button>
         <button id="equals"
                 className="key vertical"
-                onClick={handleChange}>=</button>
+                onClick={handleEquals}>=</button>
         <button id="zero" 
                 className="key jumbo"
                 onClick={handleChange}>0</button>

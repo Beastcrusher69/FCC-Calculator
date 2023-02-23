@@ -17,13 +17,22 @@ body,#root{
 }
 
 #calculator{
-  padding:10px;
+  padding:8px;
+  background-color: rgb(52, 51, 51);
 }
 
 #display{
   width:362px;
   height:75px;
   margin:5px;
+  padding:8px;
+  display:flex;
+  align-items: center;
+  justify-content:right;
+  font-family: ;
+  font-size: 30px;
+  color:orange;
+  background-color: black;
 }
 
 #keys{
@@ -33,25 +42,32 @@ body,#root{
 }
 
 .key{
-  
+  background-color: rgb(71, 69, 69);
+  color:rgb(255, 255, 255);
+  font-size: large;
+  cursor:pointer;
 }
 
 .small{
   display:inline-block;
-  height:60px;
+  height:70px;
   width:90px;
 }
 
 .jumbo{
   display:inline-block;
-  height:60px;
+  height:70px;
   width:180px;
 }
 
 .vertical{
   position:absolute;
-  height:120px;
+  height:140px;
   width:90px;
 }
 
+#clear{
+  background-color: rgb(228, 87, 87);
+
+}
 
