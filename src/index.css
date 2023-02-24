@@ -29,7 +29,7 @@ body,#root{
   display:flex;
   align-items: center;
   justify-content:right;
-  font-family: ;
+  font-family: sans-serif;
   font-size: 30px;
   color:orange;
   background-color: black;
@@ -47,6 +47,7 @@ body,#root{
   font-size: large;
   cursor:pointer;
 }
+
 
 .small{
   display:inline-block;
@@ -68,6 +69,15 @@ body,#root{
 
 #clear{
   background-color: rgb(228, 87, 87);
-
+  
 }
+
+.key:hover{
+  border: 1px solid white ;
+}
+.key:active{
+  background-color: white;
+  color: rgb(71, 69, 69);
+}
+
 

@@ -27,6 +27,17 @@ function App() {
   const handleClear = () => {
         setDisplay('0');
   }
+
+  const handleDecimal = () => {
+        const array = display.split(' ');
+
+        const regex = /\./;
+
+        if(!(regex.test(array[array.length - 1]))){
+                setDisplay(display + '.');
+        }
+
+  }
   return (
     <div id="calculator">
       <div id="display">
@@ -85,7 +96,7 @@ function App() {
                 onClick={handleChange}>0</button>
         <button id="decimal" 
                 className="key small"
-                onClick={handleChange}>.</button>
+                onClick={handleDecimal}>.</button>
 
 
       </div>
